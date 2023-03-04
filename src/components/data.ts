@@ -9,4 +9,5 @@ export const address: string[] = [
 export const phoneNumbers: string[] = [
     "Phone: 856.701.7454", 
     "Fax: XXX.XXX.XXX", 
+    "Email: Fearnzimmer@gmail.com"
 ]
