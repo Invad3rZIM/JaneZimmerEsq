@@ -33,12 +33,12 @@ export default function NavBar() {
             <div className="scale">
 
                 <Row style={{paddingLeft:15, height:75, paddingTop:225, width:"100%"}}>
-                <Col sm={2} className="hoverTransition" style={buttonCSS}><p style={{ textAlign:"center",  paddingTop:20, fontFamily:"Roboto-Regular", fontSize:16}}>Elder Law</p></Col>
-                <Col sm={2} className="hoverTransition" style={buttonCSS}><p style={{ textAlign:"center",  paddingTop:20, fontFamily:"Roboto-Regular", fontSize:16}}>Estate Planning</p></Col>
-                <Col sm={2} className="hoverTransition" style={buttonCSS}><p style={{ textAlign:"center",  paddingTop:20, fontFamily:"Roboto-Regular", fontSize:16}}>Special Needs Planning</p></Col>
-                <Col sm={2} className="hoverTransition" style={buttonCSS}><p style={{ textAlign:"center",  paddingTop:20, fontFamily:"Roboto-Regular", fontSize:16}}>Estate Administration</p></Col>
-                <Col sm={2} className="hoverTransition" style={buttonCSS}><p style={{ textAlign:"center",  paddingTop:20, fontFamily:"Roboto-Regular", fontSize:16}}>Mental Health Law</p></Col>
-                <Col sm={2} className="hoverTransition" style={buttonCSS}><p style={{ textAlign:"center",  paddingTop:20, fontFamily:"Roboto-Regular", fontSize:16}}>Guardianships</p></Col>
+                <Col sm={2} className="hoverTransition" style={buttonCSS} onClick={()=>{console.log("click")}}><a style={{textDecoration:"none", color:"white",}} href="/Practice-Areas/Elder-Law"><p style={{ textAlign:"center", paddingTop:20, fontFamily:"Roboto-Regular", fontSize:16}}>Elder Law</p></a></Col>
+                <Col sm={2} className="hoverTransition" style={buttonCSS} onClick={()=>{console.log("click")}}><a style={{textDecoration:"none", color:"white",}} href="/Practice-Areas/Estate-Administration"><p style={{ textAlign:"center",  paddingTop:20, fontFamily:"Roboto-Regular", fontSize:16}}>Estate Planning</p></a></Col>
+                <Col sm={2} className="hoverTransition" style={buttonCSS} onClick={()=>{console.log("click")}}><a style={{textDecoration:"none", color:"white",}} href="/Practice-Areas/Special-Needs-Planning"><p style={{ textAlign:"center",  paddingTop:20, fontFamily:"Roboto-Regular", fontSize:16}}>Special Needs Planning</p></a></Col>
+                <Col sm={2} className="hoverTransition" style={buttonCSS} onClick={()=>{console.log("click")}}><a style={{textDecoration:"none", color:"white",}} href="/Practice-Areas/Estate-Administration"><p style={{ textAlign:"center",  paddingTop:20, fontFamily:"Roboto-Regular", fontSize:16}}>Estate Administration</p></a></Col>
+                <Col sm={2} className="hoverTransition" style={buttonCSS} onClick={()=>{console.log("click")}}><a style={{textDecoration:"none", color:"white",}} href="/Practice-Areas/Special-Needs-Planning"><p style={{ textAlign:"center",  paddingTop:20, fontFamily:"Roboto-Regular", fontSize:16}}>Mental Health Law</p></a></Col>
+                <Col sm={2} className="hoverTransition" style={buttonCSS} onClick={()=>{console.log("click")}}><a style={{textDecoration:"none", color:"white",}} href="/Practice-Areas/Guardianship-&-Estate-Litigation"><p style={{ textAlign:"center",  paddingTop:20, fontFamily:"Roboto-Regular", fontSize:16}}>Guardianships</p></a></Col>
                 </Row>
             </div>
         </Col>
