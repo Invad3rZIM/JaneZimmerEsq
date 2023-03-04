@@ -15,7 +15,7 @@ export function ContactInformation(props: { textAlign: "left" | "right" | "cente
 export default function ContactForm(props: { includeContactInfo: boolean }) {
     let color = "orange";
     const labelStyle = { color: color, fontFamily: "Roboto-Regular" };
-    return <Container style={{ marginTop: 20, textAlign: "left", borderRightColor: "gray", borderTopColor: "gray", borderRightWidth: 0.0125, borderRightStyle: "solid", borderTopWidth: 0.0125 }}>
+    return <Container style={{ marginTop: 20, fontFamily: "Roboto-Regular", textAlign: "left", borderRightColor: "gray", borderTopColor: "gray", borderRightWidth: 0.0125, borderRightStyle: "solid", borderTopWidth: 0.0125 }}>
 
         <Container>
             <br />
@@ -47,7 +47,7 @@ export default function ContactForm(props: { includeContactInfo: boolean }) {
 
         </Container>
         {props.includeContactInfo && <>
-            <hr style={{ width: "100%", backgroundColor: "black" }} />
+            <hr style={{ width: "100%", fontFamily: "Roboto-Regular" , backgroundColor: "black" }} />
             <ContactInformation textAlign="right"/>
         </>}
     </Container>
