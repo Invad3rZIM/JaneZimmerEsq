@@ -1,0 +1,14 @@
+let contents = [
+    "Elder and special law are holistic disciplines that address the needs of elderly and disabled individuals with either advance planning or in crisis. In many cases, the goal is to obtain the best care for a loved one in the least restrictive setting funded at least in part with public benefits, such as Medicaid and Veteran’s Benefits.",
+"Jane M. Fearn-Zimmer, Esquire is recognized as a leader in elder law in New Jersey. In practice for over 20 years, she is known as a compassionate, driven, creative and effective advocate as well as for her encyclopedic knowledge of elder law, Medicaid and special needs planning. She uses cutting-edge strategies in areas such as asset protection, Medicaid planning, public benefits eligibility, guardianships, conservatorships, administrative Fair Hearings, mental health law, and estate and trust administration. The firm secures and ensures payment source for long-term care, working with families, geriatric care managers and long-term care and medical facilities to sustain quality care for the elderly and the disabled.",
+"Ms. Fearn-Zimmer works closely with clients and their families to explain the healthcare, financial, tax and asset protection strategies available, so that the families can make the best decisions for their loved ones. She keeps current with rapidly changing federal and state law and policies to keep her clients informed and to advocate effectively for them.",
+"Ms. Fearn-Zimmer has been selected to Super lawyers, and is a recipient of the Top Women in Law Award, due to Medicaid advocacy. She has been quoted as a source by Forbes Health and LegalZOOM. She speaks and blogs frequently and her work has featured in many publications, including The Elder Law Report, Including Special Needs Planning, the New Jersey Law Journal, and JD Supra. She frequently lectures for continuing legal educational associations, assisted living facilities and senior citizen groups. She has been featured as a guest on Master Your Finances, hosted by Kurt Baker, 107.7 FM."
+]
+
+export default function FirmOverview() {
+    return  <>
+    <h5 style={{ fontFamily: "Spectral-Regular", textAlign: "left", fontWeight: "bold" }}>Firm Overview</h5>
+    <p style={{ fontFamily: "Spectral-Regular", textAlign: "left", lineHeight: 2 }}>{contents.map(c => <><p style={{ paddingTop: 5 }}>{c}</p></>)}</p>
+    <iframe width="549" height="360" src="https://www.youtube.com/embed/M_86J7mIQ44" title="Master Your Finances Kurt Baker with Jane Fearn-Zimmer" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+    </>
+}

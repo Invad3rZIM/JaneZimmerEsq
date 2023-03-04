@@ -1,13 +1,67 @@
 body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+        sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+        monospace;
+}
+
+@font-face {
+    font-family: 'Spectral-Regular';
+    src: local('Spectral-Regular'), url(./media/fonts/Spectral-Regular.ttf) format('truetype');
+}
+
+
+@font-face {
+    font-family: 'Roboto-Regular';
+    src: local('Roboto-Regular'), url(./media/fonts/Roboto-Regular.ttf) format('truetype');
+}
+
+.bannerBackgroundImage {
+    background-image: url(./media/images/elder-law-backdrop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: right;
+}
+
+
+.scale {
+    background-image: url(./media/images/scale.jpg);
+    background-size: cover;
+    opacity: 1;
+    height: 300px;
+}
+
+.janePortratImage {
+    background-image: url(./media/images/jane-portrait.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 600px;
+}
+
+.topLink:hover {
+    text-decoration: none;
+    color: rgb(100,0,0);
+    transition-duration: 1s;
+}
+.topLink {
+    text-decoration: none;
+    color: orange;
+    transition-duration: 1s;
+}
+
+.hoverTransition {
+    opacity: 0.65;
+    transition-duration: 0.5s;
+}
+
+.hoverTransition:hover {
+    opacity: 1;
+    transition-duration: 0.5s;
 }
