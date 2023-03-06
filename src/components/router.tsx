@@ -16,15 +16,21 @@ import ContactForm from "./contactform";
 import Footer from "./footer";
 import { ContactPage } from "./contagepage";
 import { PracticeAreas, PracticeArea_Field, specialtiesInclude } from "./practiceAreas/practiceAreas";
+import { useWindowSize } from "./utils";
+import { Container } from "react-bootstrap";
 
 
 function HeaderNavbarWrapper(jsx: JSX.Element, includeContactInfo: boolean = true) {
+    let innerWidth = window.innerWidth
+
+    console.log("inner width - ", innerWidth);
+
     return <>
         <Header />
         <NavBar />
         <Row>
-            <Col sm={3}><ContactForm includeContactInfo={false} /></Col>
-            <Col sm={9}><div style={{ paddingTop: 20 }}>{jsx}</div></Col>
+            <Col xs={12} sm={8} m={9}><div style={{ paddingTop: 20}}>{jsx}</div></Col>
+            <Col xs={12} sm={4} m={3}><ContactForm includeContactInfo={false} /></Col>
         </Row>
         <Footer />
     </>

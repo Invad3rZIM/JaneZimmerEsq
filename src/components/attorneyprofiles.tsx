@@ -65,7 +65,7 @@ const template = [
 ]
 export default function AttorneyProfiles() {
     return <><Row>
-    <Col sm={7}>
+    <Col xs={12} sm={7}>
         <h5 style={{ fontFamily: "Spectral-Regular", textAlign: "left", fontWeight: "bold" }}>About Jane M. Fearn-Zimmer, Esquire</h5>
         <p style={{ fontFamily: "Spectral-Regular", textAlign: "left", lineHeight: 2 }}>{content.map(c => <><p style={{ paddingTop: 5 }}>{c}</p></>)}</p>
        
@@ -97,7 +97,7 @@ export default function AttorneyProfiles() {
        
 
     </Col>
-    <Col sm={5}>
+    <Col xs={12} sm={5}>
         <Image
             height="auto"
             width="100%"

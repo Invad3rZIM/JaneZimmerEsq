@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Container, Form } from "react-bootstrap";
 import { address, phoneNumbers } from "./data";
 
@@ -14,14 +15,23 @@ export function ContactInformation(props: { textAlign: "left" | "right" | "cente
 
 export default function ContactForm(props: { includeContactInfo: boolean }) {
     let color = "orange";
+
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [phoneNumber, setPhoneNumber] = useState("");
+    const [preferredContactMethod, setContactMethod] = useState("");
+    const [message, setMessage] = useState("");
+
+    
     const labelStyle = { color: color, fontFamily: "Roboto-Regular" };
-    return <Container style={{ marginTop: 20, fontFamily: "Roboto-Regular", textAlign: "left", borderRightColor: "gray", borderTopColor: "gray", borderRightWidth: 0.0125, borderRightStyle: "solid", borderTopWidth: 0.0125 }}>
+    return <Container style={{ marginTop: 20, fontFamily: "Roboto-Regular", textAlign: "left", borderRightColor: "gray", borderTopColor: "gray", borderLeftWidth: 0.0125, borderLeftStyle: "solid", borderTopWidth: 0.0125 }}>
 
         <Container>
             <br />
             <Form.Group controlId="formBasicEmail">
                 <Form.Label style={labelStyle}>Name</Form.Label>
-                <Form.Control type="text" placeholder="" />
+                <Form.Control type="text" placeholder="" onChange={(text)=>{
+                }} />
                 <br />
                 <Form.Label style={labelStyle}>Email</Form.Label>
                 <Form.Control type="email" placeholder="" />
@@ -34,10 +44,10 @@ export default function ContactForm(props: { includeContactInfo: boolean }) {
                 <Form.Label style={labelStyle}>Preferred Method of Contact</Form.Label>
 
                 <Form.Check type={"radio"} id={`check-api-${"radio"}`}>
-                    <Form.Check.Input type={"radio"} />
+                    <Form.Check.Input type={"radio"} name="group1" />
                     <Form.Check.Label>{`Email`}</Form.Check.Label>
                     <br />
-                    <Form.Check.Input type={"radio"} />
+                    <Form.Check.Input type={"radio"} name="group1" />
                     <Form.Check.Label>{`Phone`}</Form.Check.Label>
                 </Form.Check>
                 <br />

@@ -29,7 +29,7 @@ export default function HomePage() {
             <ul>
                 {values.map(value => <li style={{ textAlign: "left", lineHeight: 3, fontFamily: "Spectral-Regular" }}>{value}</li>)}
             </ul>
-            <Link to=""><p style={{ fontFamily: "Spectral-Regular" }}>Find out more.</p></Link>
+            <Link to="/Attorney-Profiles"><p style={{ fontFamily: "Spectral-Regular" }}>Find out more.</p></Link>
         </Col>
         <Col sm={5}>
             <Image
