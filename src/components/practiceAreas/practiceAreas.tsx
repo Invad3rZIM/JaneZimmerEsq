@@ -59,7 +59,7 @@ export const specialtiesInclude: {
 
 export function PracticeAreas() {
     return <Col sm={12}>
-        <p style={{ fontFamily: "Spectral-Regular", textAlign: "left" }}><span style={{ fontWeight: "bold", fontSize: 20 }}>Practice Areas</span><br /><br />
+        <p style={{ fontFamily: "Spectral-Regular", textAlign: "left", paddingLeft: "10%" }}><span style={{ fontWeight: "bold", fontSize: 20 }}>Practice Areas</span><br /><br />
             In order to serve you with the highest quality of counsel possible, the Firm’s founding attorney,
             JANE M. FEARN-ZIMMER, ESQ. is a member of the <a href="https://www.naela.org/">National Academy of Elder Law
                 Attorneys (NAELA)</a>. NAELA members are lawyers who help elderly and disabled individuals
@@ -91,7 +91,7 @@ export function PracticeAreas() {
 
 export function PracticeArea_Field(props: { title: string, body: string }) {
     return <Col xs={12} sm={12}>
-        <p style={{ fontFamily: "Spectral-Regular", textAlign: "left" }}><span style={{ fontWeight: "bold", fontSize: 20 }}><a href="../Practice-Areas">Practice Areas</a> / {props.title}</span><br /><br />
+        <p style={{ fontFamily: "Spectral-Regular", textAlign: "left",  paddingLeft: "10%" }}><span style={{ fontWeight: "bold", fontSize: 20 }}><a href="../Practice-Areas">Practice Areas</a> / {props.title}</span><br /><br />
             {props.body}
             <br />
         </p>

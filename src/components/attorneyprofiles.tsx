@@ -66,34 +66,34 @@ const template = [
 export default function AttorneyProfiles() {
     return <><Row>
     <Col xs={12} sm={7}>
-        <h5 style={{ fontFamily: "Spectral-Regular", textAlign: "left", fontWeight: "bold" }}>About Jane M. Fearn-Zimmer, Esquire</h5>
-        <p style={{ fontFamily: "Spectral-Regular", textAlign: "left", lineHeight: 2 }}>{content.map(c => <><p style={{ paddingTop: 5 }}>{c}</p></>)}</p>
+        <h5 style={{ fontFamily: "Spectral-Regular", textAlign: "left", fontWeight: "bold", paddingLeft: "10%" }}>About Jane M. Fearn-Zimmer, Esquire</h5>
+        <p style={{ fontFamily: "Spectral-Regular", textAlign: "left", lineHeight: 2,paddingLeft: "10%" }}>{content.map(c => <><p style={{ paddingTop: 5 }}>{c}</p></>)}</p>
        
-        <h5 style={{ fontFamily: "Spectral-Regular", textAlign: "left", fontWeight: "bold" }}>Representative Matters</h5>
-        <p style={{ fontFamily: "Spectral-Regular", textAlign: "left", lineHeight: 2 }}>{repHeader.map(repHeader => <><p style={{ paddingTop: 5 }}>{repHeader}</p></>)}</p>
-        <ul>
+        <h5 style={{ fontFamily: "Spectral-Regular", textAlign: "left", fontWeight: "bold",paddingLeft: "10%" }}>Representative Matters</h5>
+        <p style={{ fontFamily: "Spectral-Regular", textAlign: "left", lineHeight: 2,paddingLeft: "10%" }}>{repHeader.map(repHeader => <><p style={{ paddingTop: 5 }}>{repHeader}</p></>)}</p>
+        <ul style={{paddingLeft: "15%"}}>
             {representation.map(representation => <li style={{ textAlign: "left", lineHeight: 3, fontFamily: "Spectral-Regular" }}>{representation}</li>)}
         </ul>
 
-        <h5 style={{ fontFamily: "Spectral-Regular", textAlign: "left", fontWeight: "bold" }}>Honors and Awards</h5>
-        <ul>
-            {honors.map(honors => <li style={{ textAlign: "left", lineHeight: 3, fontFamily: "Spectral-Regular" }}>{honors}</li>)}
+        <h5 style={{ fontFamily: "Spectral-Regular", paddingLeft: "10%", textAlign: "left", fontWeight: "bold" }}>Honors and Awards</h5>
+        <ul style={{paddingLeft: "15%"}}>
+            {honors.map(honors => <li style={{ textAlign: "left",  lineHeight: 3, fontFamily: "Spectral-Regular" }}>{honors}</li>)}
         </ul>
 
 
 
-        <h5 style={{ fontFamily: "Spectral-Regular", textAlign: "left", fontWeight: "bold" }}>Professional Affilifations</h5>
-                <ul>
-            {professionalAffilifations.map(professionalAffilifations => <li style={{ textAlign: "left", lineHeight: 3, fontFamily: "Spectral-Regular" }}>{professionalAffilifations}</li>)}
+        <h5 style={{ fontFamily: "Spectral-Regular", textAlign: "left", paddingLeft: "10%", fontWeight: "bold" }}>Professional Affilifations</h5>
+        <ul style={{paddingLeft: "15%"}}>
+            {professionalAffilifations.map(professionalAffilifations => <li style={{  textAlign: "left", lineHeight: 3, fontFamily: "Spectral-Regular" }}>{professionalAffilifations}</li>)}
         </ul>
 
-        <h5 style={{ fontFamily: "Spectral-Regular", textAlign: "left", fontWeight: "bold" }}> Community Activity</h5>
-        <ul>
+        <h5 style={{ fontFamily: "Spectral-Regular",paddingLeft: "10%", textAlign: "left", fontWeight: "bold" }}> Community Activity</h5>
+        <ul style={{paddingLeft: "15%"}}>
             {communityActivities.map(communityActivities => <li style={{ textAlign: "left", lineHeight: 3, fontFamily: "Spectral-Regular" }}>{communityActivities}</li>)}
         </ul>
 
-        <h5 style={{ fontFamily: "Spectral-Regular", textAlign: "left", fontWeight: "bold" }}>  Disclaimer</h5>
-        <p style={{ fontFamily: "Spectral-Regular", textAlign: "left", lineHeight: 2 }}>{disclaimer.map(disclaimer => <><p style={{ paddingTop: 5 }}>{disclaimer}</p></>)}</p>
+        <h5 style={{paddingLeft: "10%", fontFamily: "Spectral-Regular", textAlign: "left", fontWeight: "bold" }}>  Disclaimer</h5>
+        <p style={{ paddingLeft: "10%",fontFamily: "Spectral-Regular", textAlign: "left", lineHeight: 2 }}>{disclaimer.map(disclaimer => <><p style={{ paddingTop: 5 }}>{disclaimer}</p></>)}</p>
        
 
     </Col>

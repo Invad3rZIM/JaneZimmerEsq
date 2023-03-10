@@ -7,8 +7,8 @@ let contents = [
 
 export default function FirmOverview() {
     return  <>
-    <h5 style={{ fontFamily: "Spectral-Regular", textAlign: "left", fontWeight: "bold" }}>Firm Overview</h5>
-    <p style={{ fontFamily: "Spectral-Regular", textAlign: "left", lineHeight: 2 }}>{contents.map(c => <><p style={{ paddingTop: 5 }}>{c}</p></>)}</p>
+    <h5 style={{ fontFamily: "Spectral-Regular", textAlign: "left", fontWeight: "bold", paddingLeft:"10%" }}>Firm Overview</h5>
+    <p style={{ fontFamily: "Spectral-Regular", textAlign: "left", lineHeight: 2, paddingLeft: "10%" }}>{contents.map(c => <><p style={{ paddingTop: 5 }}>{c}</p></>)}</p>
     <iframe width="549" height="360" src="https://www.youtube.com/embed/M_86J7mIQ44" title="Master Your Finances Kurt Baker with Jane Fearn-Zimmer" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
     </>
 }

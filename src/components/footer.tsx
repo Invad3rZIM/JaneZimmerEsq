@@ -10,6 +10,6 @@ export default function Footer() {
             <Col sm={4}> <span style={{ fontFamily: "Spectral-Regular", color: "rgb(150,150,150)" }}>The hiring of a lawyer is an important decision that should not be based solely upon advertisements. Before you decide, ask us to send you free written information about our qualifications and experience.</span><br/></Col>
             <Col sm={4}><span style={{ fontFamily: "Spectral-Regular", color: "rgb(150,150,150)" }}>Website Disclaimer | Privacy Policy </span><br/></Col>
         </Row>
-         <span style={{ fontFamily: "Spectral-Regular", color: "rgb(150,150,150)" }}>Law Firm Web Design by Kirk Zimmer</span><br/><br/>
+         <span style={{ fontFamily: "Spectral-Regular", color: "rgb(150,150,150)" }}>Law Firm Web Design by Kirk Zimmer & Christina Zimmer </span><br/><br/>
     </div></>
 }
