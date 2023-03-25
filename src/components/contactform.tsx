@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { Container, Form } from "react-bootstrap";
 import { address, phoneNumbers } from "./data";
+import Axios from 'axios';
 
 export function ContactInformation(props: { textAlign: "left" | "right" | "center"}) {
     return <>
@@ -21,8 +22,32 @@ export default function ContactForm(props: { includeContactInfo: boolean }) {
     const [phoneNumber, setPhoneNumber] = useState("");
     const [preferredContactMethod, setContactMethod] = useState("");
     const [message, setMessage] = useState("");
+    const [error, setError] = useState("");
+    const [success, setSucess] = useState("");
 
-    
+    const senderFunc = () => {
+        console.log({
+            name, email, phoneNumber
+        });
+
+        if(!name){
+            setError('Missing name');
+            return;
+        }
+        if(!email){
+            setError('Missing email address');
+        }
+        if(!phoneNumber){
+            setError('Missing phone number');
+        }
+        if(!message){
+            setError('Missing message');
+        }
+        setError('');
+
+
+        
+    }
     const labelStyle = { color: color, fontFamily: "Roboto-Regular" };
     return <Container style={{ marginTop: 20, fontFamily: "Roboto-Regular", textAlign: "left", borderRightColor: "gray", borderTopColor: "gray", borderLeftWidth: 0.0125, borderLeftStyle: "solid", borderTopWidth: 0.0125 }}>
 
@@ -30,15 +55,14 @@ export default function ContactForm(props: { includeContactInfo: boolean }) {
             <br />
             <Form.Group controlId="formBasicEmail">
                 <Form.Label style={labelStyle}>Name</Form.Label>
-                <Form.Control type="text" placeholder="" onChange={(text)=>{
-                }} />
+                <Form.Control type="text" placeholder="" value={name} onChange={(e) => setName(e.target.value)} required />
                 <br />
                 <Form.Label style={labelStyle}>Email</Form.Label>
-                <Form.Control type="email" placeholder="" />
+                <Form.Control type="email" placeholder="" value={email} onChange={(e) => setEmail(e.target.value)} required />
                 <br />
 
                 <Form.Label style={labelStyle}>Phone Number</Form.Label>
-                <Form.Control type="tel" placeholder="" />
+                <Form.Control type="tel" placeholder="" value={phoneNumber} onChange={(e) => setPhoneNumber(e.target.value)} required/>
                 <br />
 
                 <Form.Label style={labelStyle}>Preferred Method of Contact</Form.Label>
@@ -52,9 +76,12 @@ export default function ContactForm(props: { includeContactInfo: boolean }) {
                 </Form.Check>
                 <br />
                 <Form.Label style={labelStyle}>Message</Form.Label>
-                <Form.Control as="textarea" placeholder="" />
+                <Form.Control as="textarea" placeholder="" value={message} onChange={(e) => setMessage(e.target.value)} />
+                <br/>
+                <button onClick={senderFunc}> Submit</button>
             </Form.Group>
 
+            
         </Container>
         {props.includeContactInfo && <>
             <hr style={{ width: "100%", fontFamily: "Roboto-Regular" , backgroundColor: "black" }} />
