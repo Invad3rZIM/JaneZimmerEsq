@@ -5,7 +5,7 @@ import Axios from 'axios';
 
 export function ContactInformation(props: { textAlign: "left" | "right" | "center"}) {
     return <>
-        <p style={{ textAlign: props.textAlign, fontFamily: "Roboto-Regular" }}><span style={{ fontWeight: "bold" }}> Law Offices of Jane F.<br />
+        <p style={{ textAlign: props.textAlign, fontFamily: "Roboto-Regular" }}><span style={{ fontWeight: "bold" }}> Law Office of Jane F.<br />
             Zimmer</span><br /><br />
             {address.map(add => <><span>{add}</span><br /></>)}
             <br />
