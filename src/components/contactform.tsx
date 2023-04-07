@@ -24,35 +24,53 @@ export default function ContactForm(props: { includeContactInfo: boolean }) {
     const [message, setMessage] = useState("");
     const [error, setError] = useState("");
     const [success, setSucess] = useState("");
-
     const senderFunc = () => {
-        console.log({
-            name, email, phoneNumber
-        });
-
-        if(!name){
-            setError('Missing name');
-            return;
-        }
-        if(!email){
-            setError('Missing email address');
-        }
-        if(!phoneNumber){
-            setError('Missing phone number');
-        }
-        if(!message){
-            setError('Missing message');
-        }
-        setError('');
+            console.log({
+                name, email, phoneNumber
+            });
+            
+    
+            if(!name){
+                setError('Missing name');
+            }
+            if(!email){
+                setError('Missing email address');
+            }
+            if(!phoneNumber){
+                setError('Missing phone number');
+            }
+            if(!message){
+                setError('Missing message');
+            }
+            setError('');
+    
+            fetch("https://xwmjv2x5y3o4mttebovjd66ehq0yckri.lambda-url.us-east-1.on.aws/",  
+                {method: "POST", // *GET, POST, PUT, DELETE, etc.
+                 mode: "cors", // no-cors, *cors, same-origin
+                headers: {
+                "Content-Type": "application/json",
+                // 'Content-Type': 'application/x-www-form-urlencoded',
+                },
+                body: JSON.stringify({
+         
+                    "body":  "new message",
+                    "subject": "Form submit",
+                    "message" : "`name: ${name}, email: ${email}, phone: ${phoneNumber}, preferred: ${preferredContactMethod}, message: ${message}`"
+                 
+            }), // body data type must match "Content-Type" header
+          });
+        //  return response.json(); // parses JSON response into native JavaScript objects
+    }
 
 
         
-    }
+    
     const labelStyle = { color: color, fontFamily: "Roboto-Regular" };
     return <Container style={{ marginTop: 20, fontFamily: "Roboto-Regular", textAlign: "left", borderRightColor: "gray", borderTopColor: "gray", borderLeftWidth: 0.0125, borderLeftStyle: "solid", borderTopWidth: 0.0125 }}>
 
         <Container>
             <br />
+        <Form onSubmit={senderFunc}>
             <Form.Group controlId="formBasicEmail">
                 <Form.Label style={labelStyle}>Name</Form.Label>
                 <Form.Control type="text" placeholder="" value={name} onChange={(e) => setName(e.target.value)} required />
@@ -81,7 +99,7 @@ export default function ContactForm(props: { includeContactInfo: boolean }) {
                 <button onClick={senderFunc}> Submit</button>
             </Form.Group>
 
-            
+        </Form>
         </Container>
         {props.includeContactInfo && <>
             <hr style={{ width: "100%", fontFamily: "Roboto-Regular" , backgroundColor: "black" }} />
