@@ -24,7 +24,7 @@ const values = [
 export default function HomePage() {
     return <><Row>
         <Col sm={7}>
-            <h5 style={{ fontFamily: "Spectral-Regular", textAlign: "left", fontWeight: "bold", paddingLeft: "10%" }}>The Law Offices of Jane M. Fearn-Zimmer, Esquire</h5>
+            <h5 style={{ fontFamily: "Spectral-Regular", textAlign: "left", fontWeight: "bold", paddingLeft: "10%" }}>The Law Office of Jane M. Fearn-Zimmer, Esquire</h5>
             <p style={{ fontFamily: "Spectral-Regular", textAlign: "left", lineHeight: 2, paddingLeft: "10%" }}>{content.map(c => <><p style={{ paddingTop: 5 }}>{c}</p></>)}</p>
             <ul style={{paddingLeft:"15%"}}>
                 {values.map(value => <li style={{ textAlign: "left", lineHeight: 3, fontFamily: "Spectral-Regular" }}>{value}</li>)}
